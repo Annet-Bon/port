@@ -22,6 +22,7 @@
 }
 
 .myinfocont {
+  width: 100%;
   padding-top: 70px;
   padding-left: 90px;
   padding-right: 90px;
@@ -37,7 +38,10 @@ background: linear-gradient(180deg, rgba(17,100,102,1) 0%, rgba(209,232,226,1) 1
 }
 
 .photosize {
+  height: 400px;
   width: 370px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .contacts {
@@ -55,7 +59,13 @@ background: linear-gradient(180deg, rgba(17,100,102,1) 0%, rgba(209,232,226,1) 1
 }
 
 .contactlink {
-  color: #f5be8a;
+  color: #c76100;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  line-height: 1.5;
+}
+.contactlink:hover {
+  text-decoration: underline;
 }
 
 .cstyle {
@@ -117,7 +127,7 @@ background: linear-gradient(180deg, rgba(17,100,102,1) 0%, rgba(209,232,226,1) 1
   line-height: 24px;
 }
 
-.worktitle {
+.worktitle, .title {
   color: #2c3531;
   font-size: 16px;
   font-weight: 700;
@@ -127,8 +137,17 @@ background: linear-gradient(180deg, rgba(17,100,102,1) 0%, rgba(209,232,226,1) 1
 }
 
 .orange-title {
+  text-decoration: none;
   color: #008486;
-  margin-left: 10px;
+  transition: all .2s ease-in-out;
+}
+
+.orange-title:hover {
+  color: #f19f24;
+}
+
+.orange-title.line {
+  line-height: 1.5;
 }
 
 .timework {
@@ -178,4 +197,43 @@ background: linear-gradient(180deg, rgba(17,100,102,1) 0%, rgba(209,232,226,1) 1
   font-weight: 400;
   line-height: 24px;
   margin-left: 17px;
+}
+
+@media (min-width: 0px) and (max-width: 1199px) {
+  .myinfocont {
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+  .photosize {
+    width: 270px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .name {
+    font-size: 28px;
+    line-height: 1.5;
+  }
+  .proffesion, .about-me-title {
+    font-size: 20px;
+  }
+  .worktitle, .title {
+    font-size: 14px;
+  }
+  .sidebarstyle {
+    width: 200px;
+  }
+  .photosize {
+    width: 200px;
+    height: 230px;
+}
+.contacts {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.myinfocont {
+  padding-top: 30px;
+}
 }
